@@ -45,10 +45,21 @@ public class ListaObservaciones {
     actual.setNodoObservacionSiguiente(nuevoNodoObservacion);
   }
 
-  public void mostrar() {
+  public Observacion buscarPorNumero(int numeroObservacion) {
     NodoObservacion actual = inicio;
     while (actual != null) {
-      System.out.print(actual.getPersonaValor() + " ");
+      if (actual.getObservacion().getId() == numeroObservacion) {
+        return actual.getObservacion(); // Retornamos si encontramos la observación
+      }
+      actual = actual.getNodoObservacionSiguiente();
+    }
+    return null; // Si no se encuentra, retornamos null
+  }
+
+  public void mostrarObservaciones() {
+    NodoObservacion actual = inicio;
+    while (actual != null) {
+      System.out.print(actual.getObservacion() + " ");
       actual = actual.getNodoObservacionSiguiente();
     }
     System.out.println();

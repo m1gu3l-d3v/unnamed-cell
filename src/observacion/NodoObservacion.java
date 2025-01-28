@@ -1,20 +1,20 @@
 package observacion;
 
 public class NodoObservacion {
-  private Observacion personaValor;
+  private Observacion observacion;
   private NodoObservacion nodoObservacionSiguiente;
 
   public NodoObservacion(Observacion personaValor) {
-    this.personaValor = personaValor;
+    this.observacion = personaValor;
     nodoObservacionSiguiente = null;
   }
 
-  public Observacion getPersonaValor() {
-    return personaValor;
+  public Observacion getObservacion() {
+    return observacion;
   }
 
-  public void setPersonaValor(Observacion personaValor) {
-    this.personaValor = personaValor;
+  public void setObservacion(Observacion personaValor) {
+    this.observacion = personaValor;
   }
 
   public NodoObservacion getNodoObservacionSiguiente() {
