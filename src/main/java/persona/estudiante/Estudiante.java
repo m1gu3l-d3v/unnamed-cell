@@ -1,7 +1,6 @@
 package persona.estudiante;
 
 import observacion.ListaObservaciones;
-import observacion.NodoObservacion;
 import observacion.Observacion;
 
 public class Estudiante {
